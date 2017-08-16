@@ -1,19 +1,31 @@
-@extends('layouts.app')
+@extends('layouts.myapp3')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        
+<div class="boy">
+ 
+        <div id="contac"class="col-md-6">
+                     
+                        
+                         <img src="img/registro.png" >
+                         
+                       
+        </div>
             
+    
+     <div id="contac2" class="col-md-6">
+         
+          <img src="img/flacha.png" >
+          <h1 class="text-right">Registro</h1>
+          <h5 class="text-right">Ya Tienes cuenta <a href="#">Inicia Ahora</a></h5>
+         
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
                         <br> <br> 
-                        <div class="col-md-6">
-                         <h1>Direccion de Contacto</h1><br>
+                        
+                        <div class="text-right"> <label for="name" class="text-center">NOMBRE</label></div>
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Nombre</label>
-
-                            <div class="col-md-6">
+                            
+                            <div class="col-md-12">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
@@ -25,11 +37,9 @@
                         </div>
                         
                         
-                        
+                        <div class="text-right"> <label for="apellidos" >APELLIDO</label></div>
                         <div class="form-group{{ $errors->has('apellidos') ? ' has-error' : '' }}">
-                            <label for="apellidos" class="col-md-4 control-label">Apellidos</label>
-
-                            <div class="col-md-6">
+                           <div class="col-md-12">
                                 <input id="apellidos" type="text" class="form-control" name="apellidos" value="{{ old('apellidos') }}" required autofocus>
 
                                 @if ($errors->has('apellidos'))
@@ -41,11 +51,9 @@
                         </div>
                         
                         
-                   
+                         <div class="text-right"><label for="email" >USUARIO O CORREO ELECTRONICO</label></div>
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
+                             <div class="col-md-12">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
@@ -55,57 +63,17 @@
                                 @endif
                             </div>
                         </div>
-                        
-                         
-                       
-                        
-                        </div>
-                        
-                        
-                        
-<!--                        kkkkkkkkkkkkkkkkkkkk-->
-                        
-                        
-                        
-                        
-                        <div class="col-md-6">
-                        
-                
-                        <div class="form-group{{ $errors->has('pais') ? ' has-error' : '' }}">
-                            <label for="pais" class="col-md-4 control-label">Pais</label>
-
-                            <div class="col-md-6">
-                                <input id="pais" type="text" class="form-control" name="pais" value="{{ old('pais') }}" required autofocus>
-
-                                @if ($errors->has('pais'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('pais') }}</strong>
-                                    </span>
-                                @endif
+                            
+                          <div class="text-right"><label for="email-confirm" >CONFIRMAR USUARIO O CORREO ELECTRONICO</label>  </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input id="email-confirm" type="email" class="form-control" name="email_confirmation" required>
                             </div>
                         </div>
-                        
-                        <div class="form-group{{ $errors->has('telefono') ? ' has-error' : '' }}">
-                            <label for="telefono" class="col-md-4 control-label">Telefono</label>
-
-                            <div class="col-md-6">
-                                <input id="telefono" type="text" class="form-control" name="telefono" value="{{ old('telefono') }}" required autofocus>
-
-                                @if ($errors->has('telefono'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('telefono') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        
-                        
-                        
-
+                            
+                          <div class="text-right"> <label for="password" >CONTRASEÑA</label></div>
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
+                         <div class="col-md-12">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -115,25 +83,54 @@
                                 @endif
                             </div>
                         </div>
+                
+                            
+                       <div class="text-right"><label for="pais" >PAIS</label></div>
+                        <div class="form-group{{ $errors->has('pais') ? ' has-error' : '' }}">
+                           
+                            <div class="col-md-12">
+                                <input id="pais" type="text" class="form-control" name="pais" value="{{ old('pais') }}" required autofocus>
 
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                @if ($errors->has('pais'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('pais') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-block btn-primary">
+                            
+                            
+                            
+                            
+                            
+                             <div class="text-right">{!!Form::label('tipoCuenta', 'TIPO DE CUENTA')!!}</div>
+                            
+                            
+                                 <div id="empresa-personal"class="text-center">
+                                     <img src="img/registro-empresa.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                     <img src="img/registro-persona.png">
+                                <br>
+                            <label class="radio-inline"><input type="radio" name="tipoCuenta" value="empresa" id="tipoCuenta">Empresa</label>
+                            <label class="radio-inline"><input type="radio" name="tipoCuenta" value="personal" id="tipoCuenta">Personal</label>
+                            
+                            </div>
+                            
+                            
+                       
+                             <div id="reg">  
+                        <div class="form-group text-center">
+                            <div class="col-md-6 ">
+                                <button type="submit" class="btn btn-success">
                                     Register
                                 </button>
                             </div>
+                            
                         </div>
-                         </div>
+                                 </div> 
+                              <br>
+                         
+
                     </form>
-                </div>
-           
-        
+        </div>
+    </div>            
 @endsection

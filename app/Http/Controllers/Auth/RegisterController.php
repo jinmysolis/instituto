@@ -49,23 +49,11 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'segundo_nombre' => 'required|max:255',
             'apellidos' => 'required|max:255',
-            'idiomas' => 'required|max:255',
-            'zona_horaria' => 'required|max:255',
-            'quien_soy' => 'required|max:1000',
-            'historia_laboral' => 'required',
-            'certificaciones' => 'required',
-            'portafolio' => 'required',
-            'direccion_postal' => 'required|max:255',
-            'ciudad' => 'required|max:255',
-            'estado' => 'required|max:255',
-            'codigo_postal' => 'required|max:255',
             'pais' => 'required|max:255',
-            'telefono' => 'required|max:255',
-            'celular' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'tipoCuenta' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users|confirmed',
+            'password' => 'required|min:6',
         ]);
     }
 
@@ -79,22 +67,10 @@ class RegisterController extends Controller
     {
         return User::create([
              'name' => $data['name'],
-             'segundo_nombre' => $data['segundo_nombre'],
              'apellidos' => $data['apellidos'],
-             'idiomas' => $data['idiomas'],
-             'zona_horaria' => $data['zona_horaria'],
-             'quien_soy' => $data['quien_soy'],
-             'historia_laboral' => $data['historia_laboral'],
-             'certificaciones' => $data['certificaciones'],
-             'portafolio' => $data['portafolio'],
-             'direccion_postal' => $data['direccion_postal'],
-             'ciudad' => $data['ciudad'],
-             'estado' => $data['estado'],
-             'codigo_postal' => $data['codigo_postal'],
              'email' => $data['email'],
              'pais' => $data['pais'],
-             'telefono' => $data['telefono'],
-             'celular' => $data['celular'],
+             'tipoCuenta' => $data['tipoCuenta'],
              'password' => bcrypt($data['password']),
         ]);
     }

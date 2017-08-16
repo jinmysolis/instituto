@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>resources/views/layouts/myapp2.blade.php</url>
+            <bookmark id="1">
+                <name/>
+                <line>88</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/negocio/resources/assets/sass/app.scss</file>
-            <file>file:/C:/xampp/htdocs/negocio/resources/views/layouts/myapp.blade.php</file>
-            <file>file:/C:/xampp/htdocs/negocio/resources/views/welcome.blade.php</file>
-            <file>file:/C:/xampp/htdocs/negocio/public/css/app.css</file>
-            <file>file:/C:/xampp/htdocs/negocio/resources/views/layouts/myapp2.blade.php</file>
+            <file>file:/C:/xampp/htdocs/negocio/app/Empleo.php</file>
+            <file>file:/C:/xampp/htdocs/negocio/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/negocio/database/migrations/2017_08_15_004504_create_empleos_table.php</file>
+            <file>file:/C:/xampp/htdocs/negocio/app/Http/Controllers/EmpleosController.php</file>
+            <file>file:/C:/xampp/htdocs/negocio/resources/views/empleos/index.blade.php</file>
         </group>
     </open-files>
 </project-private>
